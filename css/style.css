@@ -373,14 +373,33 @@ MEDIA QUERY  */
 /*Smart Phones */
 
 @media (max-width:500px) {
+
+    #showcase .showcase-content h1 {
+        font-size: 4rem;
+    }
+
+    #showcase .showcase-content p {
+        font-size: 1rem;
+    }
+
+    #showcase .showcase-content .btn {
+        font-size: 1rem;
+    }
+
     .info-content {
         width: 100%;
+    }
+
+    .info-img {
+        margin: 0 auto;
+        ;
     }
 
     #testimonials p {
         margin: auto;
         padding-bottom: 2rem;
         font-size: .5rem;
+        min-width: 100%;
     }
 
     #testimonials .img-1 {
@@ -420,8 +439,18 @@ MEDIA QUERY  */
         font-size: .4rem;
     }
 
-    .info-content .col- {
-        width: 100%;
+    .info-content .col-md-6 {
+        min-width: 100%;
+    }
+
+    .info-img {
+        margin: 5rem;
+        ;
+    }
+
+    .social-content {
+        margin: 4rem;
+        ;
     }
 
     #testimonials p {
@@ -464,7 +493,19 @@ MEDIA QUERY  */
 
 /* Normal  */
 
-@media (min-width: 769px) and (max-width: 1200px) {}
+@media (min-width: 769px) and (max-width: 1200px) {
+
+    .social-content {
+        margin: 4rem;
+        ;
+    }
+
+    .info-img {
+        margin: 5rem;
+        ;
+    }
+
+}
 
 /* Widescreen */
 
