@@ -26,7 +26,7 @@
 
 <body>
     <header>
-        <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
+        <nav id="navbar" class="navbar navbar-expand-lg ">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">Vizcaya</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -54,6 +54,24 @@
         </nav>
 
         <div id="showcase">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-lg-6 hero-left showcase-img">
+                        &nbsp;
+                    </div>
+
+                    <div class="col-lg-6 hero-right showcase-content">
+                        <h1>A Day in <span class="text-prime">Paradise</span></h1>
+                        <p class="lead"> Welcome to Miami's Number One Luxury Hotel</p>
+                        <a class="btn btn-dark" href="about.html">Discover More</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- <div id="showcase">
             <div class="container">
                 <div class="showcase-content">
                     <h1>A Day in <span class="text-prime">Paradise</span></h1>
@@ -62,215 +80,336 @@
                 </div>
             </div>
         </div>
-    </header>
+    </header> -->
 
-    <section id="home-info">
-        <div class="container-fluid">
-            <div class=row>
-                <div class="info-content col-md-6 col-sm-6">
-                    <h2><span class="text-prime">The History</span> of Our Hotel</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, quisquam explicabo. Amet at
-                        laudantium
-                        possimus nobis, obcaecati iusto, provident qui error odit totam quas dolores quis harum ut
-                        ab
-                        fugit
-                        nisi
-                        rerum quos deserunt id aspernatur. Distinctio iste eveniet saepe.
-                    </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquam maiores modi facere
-                        repudiandae
-                        illum dolorem</p>
-                    <a href="about.html" class="btn btn-light">Read More</a>
+        <section id="home-info">
+            <div class="container-fluid">
+                <div class=row>
+                    <div class="info-content col-md-6 col-sm-6">
+                        <h2><span class="text-prime">The History</span> of Our Hotel</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, quisquam explicabo. Amet at
+                            laudantium
+                            possimus nobis, obcaecati iusto, provident qui error odit totam quas dolores quis harum ut
+                            ab
+                            fugit
+                            nisi
+                            rerum quos deserunt id aspernatur. Distinctio iste eveniet saepe.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquam maiores modi facere
+                            repudiandae
+                            illum dolorem</p>
+                        <a href="about.html" class="btn btn-light">Read More</a>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <img class="info-img" src="img/photo-1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="features">
+            <div class="container-fluid">
+                <div class="feat-row row">
+                    <div class="feat-second-1 col-md-4">
+                        <i class="icon ion-ios-navigate"></i>
+                        <h3>Great location</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, nihil!</p>
+                    </div>
+                    <div class=" feat-prime col-md-4">
+                        <i class="icon ion-ios-restaurant"></i>
+                        <h3>Private Dinner</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, nihil!</p>
+                    </div>
+                    <div class="feat-second-2 col-md-4">
+                        <i class="icon ion-ios-fitness"></i>
+                        <h3>Fitness Room</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, nihil!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="social">
+            <div class=container-fluid>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <img class="social-img" src="img/social.jpg" alt="Social Media Img">
                 </div>
                 <div class="col-md-6 col-sm-6">
-                    <img class="info-img" src="img/photo-1.jpg" alt="">
+                    <div class="social-content">
+                        <h3>Tag us on Instagram <span class="text-prime">#Vizcaya_mia</span></h3>
+                        <i class="icon ion-logo-instagram"></i>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-    </section>
+        <section id="location">
+            <div id='map'></div>
+            <script>
+                mapboxgl.accessToken =
+                    'pk.eyJ1IjoiYnJpdG9rMzAiLCJhIjoiY2p6bzR6OGVnMGFwOTNjbWtuamtqdDV0ZSJ9.qnR97mJrARa-GpriDvmJZA';
+                var map = new mapboxgl.Map({
+                    container: 'map',
+                    style: "mapbox://styles/mapbox/light-v9",
+                    center: [-80.1300, 25.7907],
+                    zoom: 12
+                });
 
-    <section id="features">
-        <div class="container-fluid">
-            <div class="feat-row row">
-                <div class="feat-second-1 col-md-4">
-                    <i class="icon ion-ios-navigate"></i>
-                    <h3>Great location</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, nihil!</p>
+                new mapboxgl.Marker()
+                    .setLngLat([-80.1300, 25.7907])
+                    .addTo(map);
+            </script>
+        </section>
+
+        <section id="booking">
+            <form action="">
+                <div class="form-group">
+                    <h2 class="heading">Booking & contact</h2>
+                    <div class="controls">
+                        <input type="text" id="name" class="floatLabel" name="name">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="controls">
+                        <input type="text" id="email" class="floatLabel" name="email">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="controls">
+                        <input type="tel" id="phone" class="floatLabel" name="phone">
+                        <label for="phone">Phone</label>
+                    </div>
+                    <div class="grid">
+                        <div class="col-2-3">
+                            <div class="controls">
+                                <input type="text" id="street" class="floatLabel" name="street">
+                                <label for="street">Street</label>
+                            </div>
+                        </div>
+                        <div class="col-1-3">
+                            <div class="controls">
+                                <input type="number" id="street-number" class="floatLabel" name="street-number">
+                                <label for="street-number">Number</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="col-2-3">
+                            <div class="controls">
+                                <input type="text" id="city" class="floatLabel" name="city">
+                                <label for="city">City</label>
+                            </div>
+                        </div>
+                        <div class="col-1-3">
+                            <div class="controls">
+                                <input type="text" id="post-code" class="floatLabel" name="post-code">
+                                <label for="post-code">Post Code</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="controls">
+                        <input type="text" id="country" class="floatLabel" name="country">
+                        <label for="country">Country</label>
+                    </div>
                 </div>
-                <div class=" feat-prime col-md-4">
-                    <i class="icon ion-ios-restaurant"></i>
-                    <h3>Private Dinner</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, nihil!</p>
+                <!--  Details -->
+                <div class="form-group">
+                    <h2 class="heading">Details</h2>
+                    <div class="grid">
+                        <div class="col-1-4 col-1-4-sm">
+                            <div class="controls">
+                                <input type="date" id="arrive" class="floatLabel" name="arrive"
+                                    value="<?php echo date('Y-m-d'); ?>">
+                                <label for="arrive" class="label-date"><i
+                                        class="fa fa-calendar"></i>&nbsp;&nbsp;Arrive</label>
+                            </div>
+                        </div>
+                        <div class="col-1-4 col-1-4-sm">
+                            <div class="controls">
+                                <input type="date" id="depart" class="floatLabel" name="depart"
+                                    value="<?php echo date('Y-m-d'); ?>" />
+                                <label for="depart" class="label-date"><i
+                                        class="fa fa-calendar"></i>&nbsp;&nbsp;Depart</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="col-1-3 col-1-3-sm">
+                            <div class="controls">
+                                <i class="fa fa-sort"></i>
+                                <select class="floatLabel">
+                                    <option value="blank"></option>
+                                    <option value="1">1</option>
+                                    <option value="2" selected>2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                <label for="fruit"><i class="fa fa-male"></i>&nbsp;&nbsp;People</label>
+                            </div>
+                        </div>
+                        <div class="col-1-3 col-1-3-sm">
+                            <div class="controls">
+                                <i class="fa fa-sort"></i>
+                                <select class="floatLabel">
+                                    <option value="blank"></option>
+                                    <option value="deluxe" selected>With Bathroom</option>
+                                    <option value="Zuri-zimmer">Without Bathroom</option>
+                                </select>
+                                <label for="fruit">Room</label>
+                            </div>
+                        </div>
+
+                        <div class="col-1-3 col-1-3-sm">
+                            <div class="controls">
+                                <i class="fa fa-sort"></i>
+                                <select class="floatLabel">
+                                    <option value="blank"></option>
+                                    <option value="single-bed">Single</option>
+                                    <option value="double-bed" selected>Double</option>
+                                </select>
+                                <label for="fruit">Bedding</label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="grid">
+                        <p class="info-text">Please describe your needs e.g. Extra beds, children's cots</p>
+                        <br>
+                        <div class="controls">
+                            <textarea name="comments" class="floatLabel" id="comments"></textarea>
+                            <label for="comments">Comments</label>
+                        </div>
+                        <button type="submit" value="Submit" class="col-1-4">Submit</button>
+                    </div>
                 </div>
-                <div class="feat-second-2 col-md-4">
-                    <i class="icon ion-ios-fitness"></i>
-                    <h3>Fitness Room</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, nihil!</p>
+            </form>
+        </section>
+
+
+        <section id="gallery">
+
+            <div class="container-fluid">
+                <div class="gallery" id="gallery">
+                    <div class="mb-3 pics animation">
+                        <img class="img-fluid" src="img/miami.jpg" alt="Miami">
+                    </div>
+
+                    <div class="mb-3 pics animation">
+                        <img class="img-fluid" src="img/man.jpg" alt="man">
+                    </div>
+
+                    <div class="mb-3 pics animation">
+                        <img class="img-fluid" src="img/dinner.jpg" alt="View">
+                    </div>
+
+                    <div class="mb-3 pics animation">
+                        <img class="img-fluid" src="img/pool.jpg" alt="pool">
+                    </div>
+
+                    <div class="mb-3 pics animation">
+                        <img class="img-fluid" src="img/private.jpg" alt="private">
+                    </div>
+
+                    <div class="mb-3 pics animation">
+                        <img class="img-fluid" src="img/luxury.jpg" alt="Luxury">
+                    </div>
+
+                    <div class="mb-3 pics animation">
+                        <img class="img-fluid" src="img/boat.jpg" alt="boat">
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="social">
-        <div class=container-fluid>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-sm-6">
-                <img class="social-img" src="img/social.jpg" alt="Social Media Img">
-            </div>
-            <div class="col-md-6 col-sm-6">
-                <div class="social-content">
-                    <h3>Tag us on Instagram <span class="text-prime">#Vizcaya_mia</span></h3>
-                    <i class="icon ion-logo-instagram"></i>
+
+        <footer id="main-footer">
+            <div class="container-fluid"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Vizcaya &copy; 2019 All Rights Reserved</p>
+                    <p>Designed by Kelvin Brito</p>
+                    <p>1010 Collins Avenue, Miami Beach, FL 33140</p>
+                    <p>Reservations 800-555-1010</p>
+                </div>
+                <div class="col-md-6">
+                    <ul class="social-links">
+                        <li> <a href="#"><i class="footer-icon icon ion-logo-facebook"></i></a></li>
+                        <li><a href="#"><i class="footer-icon icon ion-logo-twitter"></i></a></li>
+                        <li><a href="#"><i class="footer-icon icon ion-logo-googleplus"></i></a></li>
+                        <li><a href="#"><i class="footer-icon icon ion-logo-youtube"></i></a></li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section id="location">
-        <div id='map'></div>
+        </footer>
+
+
+
+        <!-- TECHSCROLL  -->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+        <!-- BOOTSTRAP JS  -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+
         <script>
-            mapboxgl.accessToken =
-                'pk.eyJ1IjoiYnJpdG9rMzAiLCJhIjoiY2p6bzR6OGVnMGFwOTNjbWtuamtqdDV0ZSJ9.qnR97mJrARa-GpriDvmJZA';
-            var map = new mapboxgl.Map({
-                container: 'map',
-                style: "mapbox://styles/mapbox/light-v9",
-                center: [-80.1300, 25.7907],
-                zoom: 12
+            ScrollReveal().reveal(".navbar", {
+                duration: 2000,
+                origin: "bottom"
             });
 
-            new mapboxgl.Marker()
-                .setLngLat([-80.1300, 25.7907])
-                .addTo(map);
+            ScrollReveal().reveal(".showcase-content", {
+                duration: 2000,
+                origin: "bottom",
+                delay: 1000,
+            });
+
+            ScrollReveal().reveal(".info-content", {
+                duration: 2000,
+                origin: "left",
+                distance: "30rem"
+            });
+
+            ScrollReveal().reveal("#features", {
+                duration: 2000,
+                origin: "bottom",
+                distance: "30rem"
+            });
+
+            ScrollReveal().reveal("#social", {
+                duration: 2000,
+                origin: "bottom",
+                distance: "30rem",
+                delay: 1000,
+            });
+
+            ScrollReveal().reveal("#features", {
+                duration: 2000,
+                origin: "bottom",
+                distance: "30rem"
+            });
+
+            ScrollReveal().reveal("#gallery", {
+                duration: 2000,
+                origin: "bottom",
+                distance: "30rem"
+            });
+
+            ScrollReveal().reveal("#main-footer", {
+                duration: 2000,
+                origin: "bottom",
+            });
         </script>
-    </section>
-
-
-    <section id="gallery">
-
-        <div class="container-fluid">
-            <div class="gallery" id="gallery">
-                <div class="mb-3 pics animation">
-                    <img class="img-fluid" src="img/miami.jpg" alt="Miami">
-                </div>
-
-                <div class="mb-3 pics animation">
-                    <img class="img-fluid" src="img/man.jpg" alt="man">
-                </div>
-
-                <div class="mb-3 pics animation">
-                    <img class="img-fluid" src="img/dinner.jpg" alt="View">
-                </div>
-
-                <div class="mb-3 pics animation">
-                    <img class="img-fluid" src="img/pool.jpg" alt="pool">
-                </div>
-
-                <div class="mb-3 pics animation">
-                    <img class="img-fluid" src="img/private.jpg" alt="private">
-                </div>
-
-                <div class="mb-3 pics animation">
-                    <img class="img-fluid" src="img/luxury.jpg" alt="Luxury">
-                </div>
-
-                <div class="mb-3 pics animation">
-                    <img class="img-fluid" src="img/boat.jpg" alt="boat">
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <footer id="main-footer">
-        <div class="container-fluid"></div>
-        <div class="row">
-            <div class="col-md-6">
-                <p>Vizcaya &copy; 2019 All Rights Reserved</p>
-                <p>Designed by Kelvin Brito</p>
-                <p>1010 Collins Avenue, Miami Beach, FL 33140</p>
-                <p>Reservations 800-555-1010</p>
-            </div>
-            <div class="col-md-6">
-                <ul class="social-links">
-                    <li> <a href="#"><i class="footer-icon icon ion-logo-facebook"></i></a></li>
-                    <li><a href="#"><i class="footer-icon icon ion-logo-twitter"></i></a></li>
-                    <li><a href="#"><i class="footer-icon icon ion-logo-googleplus"></i></a></li>
-                    <li><a href="#"><i class="footer-icon icon ion-logo-youtube"></i></a></li>
-                </ul>
-            </div>
-        </div>
-
-    </footer>
-
-
-
-    <!-- TECHSCROLL  -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-
-    <!-- BOOTSTRAP JS  -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-
-    <script>
-        ScrollReveal().reveal(".navbar", {
-            duration: 2000,
-            origin: "bottom"
-        });
-
-        ScrollReveal().reveal(".showcase-content", {
-            duration: 2000,
-            origin: "bottom",
-            delay: 1000,
-        });
-
-        ScrollReveal().reveal(".info-content", {
-            duration: 2000,
-            origin: "left",
-            distance: "30rem"
-        });
-
-        ScrollReveal().reveal("#features", {
-            duration: 2000,
-            origin: "bottom",
-            distance: "30rem"
-        });
-
-        ScrollReveal().reveal("#social", {
-            duration: 2000,
-            origin: "bottom",
-            distance: "30rem",
-            delay: 1000,
-        });
-
-        ScrollReveal().reveal("#features", {
-            duration: 2000,
-            origin: "bottom",
-            distance: "30rem"
-        });
-
-        ScrollReveal().reveal("#gallery", {
-            duration: 2000,
-            origin: "bottom",
-            distance: "30rem"
-        });
-
-        ScrollReveal().reveal("#main-footer", {
-            duration: 2000,
-            origin: "bottom",
-        });
-    </script>
 </body>
 
 </html>
